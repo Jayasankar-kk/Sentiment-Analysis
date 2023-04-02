@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sentiment Analysis </title>
+</head>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+  <ul class="flashes">
+	{% for message in messages %}
+	  <li>{{ message }}</li>
+	{% endfor %}
+  </ul>
+{% endif %}
+{% endwith %}
+<body>
+	<h1>Sentiment Analysis Home Page</h1>
+	
+	New User:  <a href="{{ url_for('signup') }}">Sign up</a><br><br>
+	Existing User: <a href="{{ url_for('signin') }}">Sign in</a><br><br>
+
+</body>
+</html>

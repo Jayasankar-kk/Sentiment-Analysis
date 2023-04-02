@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <h1>Sign Up</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class="flashes">
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% endwith %}
+    <form method="POST" action="{{ url_for('signup') }}">
+      {{ form.hidden_tag() }}
+      {{ form.username.label }} {{ form.username() }}<br><br>
+      {{ form.password.label }} {{ form.password() }}<br><br>
+      {{ form.email.label }} {{ form.email() }}<br><br>
+      {{ form.place.label }} {{ form.place() }}<br><br>
+      {{ form.submit() }}
+    </form>
+  </body>
+</html>

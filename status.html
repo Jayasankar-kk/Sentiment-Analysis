@@ -1,0 +1,19 @@
+<!-- status.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Status Page</title>
+</head>
+<body>
+	<h1>Check Status</h1>
+	<form method="POST">
+		<p>Database ID: {{ form.db_id }}</p>
+		<p>{{ form.tocken(hidden=True) }}</p> 
+		<p><input type="submit" value="Check"></p>
+	</form>
+	{% if result %}
+		<p>Result: {{ result }}</p>
+	{% endif %}
+</body>
+</html>

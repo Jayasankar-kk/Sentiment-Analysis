@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+  </head>
+  <body>
+    <h1>Sentiment Analysis User Page</h1>
+    <style>
+      h1 {
+        margin-bottom: 20px;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+    </style>
+     <h3>Upload the file for analysis:</h3>
+    <form method = "POST" enctype="multipart/form-data" action = "{{ url_for('upload_csv') }}">  
+        <input type="hidden" id = 'tocken' name="tocken" value="{{ tocken }}">
+        <input type="file" name="file" accept=".csv">
+        <input type = "submit" value="Upload"> 
+    
+    </form>
+    <style>
+      h1 {
+        margin-bottom: 20px;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+    </style>
+   
+    
+    <style>
+      h1 {
+        margin-bottom: 20px;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+    </style>
+    <h3>Edit Profile</h3>
+    <a href="{{ url_for('password_change') }}">Change Password</a>
+    <style>
+      h1 {
+        margin-bottom: 20px;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+    </style>
+    <form method="POST" action="{{ url_for('delete') }}">
+      <input type="hidden" name="username" value="{{ username }}">
+      <button type="submit">Delete Profile</button>
+  </form>
+  <style>
+    h1 {
+      margin-bottom: 20px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <form method="GET" action="{{ url_for('index') }}">
+    <button type="submit">Logout</button>
+  </form>
+  </body>
+</html>

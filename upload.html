@@ -1,0 +1,11 @@
+
+<!DOCTYPE html>
+<html> 
+<head> 
+    <title>Uploading & Reading CSV file</title> 
+</head> 
+<body> 
+    <form method = "POST"  action = "{{ url_for('upload_csv') }}">   
+        <input type="file" name="file" accept=".csv">
+        <input type = "submit" value="Upload"> 
+    </form>

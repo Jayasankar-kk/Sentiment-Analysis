@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My App</title>
+	<meta http-equiv="refresh" content="5">
+</head>
+<body>
+	<h1>Sentiment Analysis was Successful</h1>
+	<a href="{{ url_for('download') }}">Download as CSV file</a><br>
+	<a href="{{ url_for('profile') }}">Back</a>
+	<table>
+		<thead>
+			<tr>
+				<th>Product Name</th>
+				<th>Reviews</th>
+				<th>Sentiment Analysis</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in data %}
+			<tr>
+				<td>{{ row['Product Name'] }}</td>
+				<td>{{ row['Reviews'] }}</td>
+				<td>{{ row['Sentiment Analysis'] }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<form method="GET" action="{{ url_for('index') }}">
+		<button type="submit">Logout</button>
+	  </form>
+</body>
+</html>

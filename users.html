@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+</head>
+<body>
+	<h1>Users</h1>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Username</th>
+			<th>Email</th>
+			<th>Password</th>
+			<th>Place</th>
+			<th>Action</th>
+		</tr>
+		{% for user in users %}
+		<tr>
+			<td>{{ user.id }}</td>
+			<td>{{ user.username }}</td>
+			<td>{{ user.email }}</td>
+			<td>{{ user.password }}</td>
+			<td>{{ user.place }}</td>
+			<td>
+				<form method="POST" action="{{ url_for('delete') }}">
+					<input type="hidden" name="username" value="{{ user.username }}">
+					<button type="submit">Delete</button>
+				</form>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+    <a href="{{ url_for('password_change') }}">Change Password</a>
+</body>
+</html>
