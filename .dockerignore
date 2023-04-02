@@ -1,0 +1,10 @@
+*/__pycache__
+.pytest_cache
+Include
+Lib
+Scripts
+myapp.log
+testing.py
+templates
+flaskform.py
+flaskupdate.py

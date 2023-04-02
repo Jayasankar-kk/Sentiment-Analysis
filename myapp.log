@@ -1,0 +1,10 @@
+2023-03-24 15:19:52 DEBUG Access token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJEaG9uaSIsImV4cCI6MTY3OTY1MzE5Mn0.lbLaQzt59PgMDlkFR7UddTkoeZPR7QORn5GBthaTd30
+2023-03-24 15:20:02 DEBUG Image_path: /sample.csv
+2023-03-24 15:20:02 DEBUG username for statustable: Dhoni
+2023-03-24 15:20:03 DEBUG db_id: 46
+2023-03-24 15:20:10 INFO Background task added
+2023-03-24 15:20:56 INFO Sentimental Analysis Done
+2023-03-24 15:21:40 DEBUG Access token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBa2JhciIsImV4cCI6MTY3OTY1MzMwMH0.Yq_RzLiAj8HZSCYH_nhyKRus-YPmHWye9_bdITn5Bzo
+2023-03-24 15:22:02 DEBUG user for password change: <models.User object at 0x000001F435208340>
+2023-03-24 15:22:35 DEBUG Access token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBa2JhciIsImV4cCI6MTY3OTY1MzM1NX0.I2XFq_1en7ksnO7T7rGL3l8a6HXaaWk845OTYbva31s
+2023-03-24 15:22:41 INFO User Deleted

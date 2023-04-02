@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      DATABASE_URL: "postgresql://uighj88f1fg7s0utkkxm:1f03EXBw5eVBz67Gl6SOp6DNNay26T@bkyi3blsdgi3ig1pmuuv-postgresql.services.clever-cloud.com:5432/bkyi3blsdgi3ig1pmuuv"
+    volumes:
+      - dbdata:/var/lib/postgresql/data/
+
+
+  # app_flask:
+  #   image: myapp_flask
+  #   restart: always
+  #   ports:
+  #     - "3000:5000"
+  #   depends_on:
+  #     - postgres
+  #     - app_fastapi
+  #   environment:
+  #      DATABASE_URL: "postgresql://uighj88f1fg7s0utkkxm:1f03EXBw5eVBz67Gl6SOp6DNNay26T@bkyi3blsdgi3ig1pmuuv-postgresql.services.clever-cloud.com:5432/bkyi3blsdgi3ig1pmuuv"
+    
+
+  app_fastapi:
+  
+    image: sentanalysis
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: "postgresql://uighj88f1fg7s0utkkxm:1f03EXBw5eVBz67Gl6SOp6DNNay26T@bkyi3blsdgi3ig1pmuuv-postgresql.services.clever-cloud.com:5432/bkyi3blsdgi3ig1pmuuv"
+
+volumes:
+  dbdata:
+
+    
